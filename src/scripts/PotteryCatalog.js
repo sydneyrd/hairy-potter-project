@@ -6,11 +6,9 @@ export const toSellOrNotToSell = (potObj) => {
         potObj.price = 40
     } else if (potObj.weight <= 6) {
         potObj.price = 20
-    }
+    } potInventory.push(potObj) 
+    } return potInventory
 }
-
-        potInventory.push(potObj) 
-return potInventory}
 
 export const usePottery = () => {
 return potInventory.map(potInventory => ({...potInventory}))
