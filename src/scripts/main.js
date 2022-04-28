@@ -9,7 +9,7 @@ let vase = makePottery('vase', 11, 5)
 let plate = makePottery('Plate', 2, 8)
 let teaCup = makePottery('cup', 8, 9)
 let smallPlate = makePottery('plate', 3, 6)
-firePottery(mug, 2200)
+firePottery(mug, 2600)
 firePottery(vase, 1000)
 firePottery(plate, 1500)
 firePottery(teaCup, 2000)
@@ -22,11 +22,8 @@ toSellOrNotToSell(teaCup)
 toSellOrNotToSell(smallPlate)
 
 console.log(mug, vase, plate, teaCup, smallPlate)
-
-
-
 const mainContainer = document.querySelector(".potteryList")
- mainContainer.innerHTML = PotteryList(usePottery)
+ mainContainer.innerHTML = PotteryList()
 
 // Fire each piece of pottery in the kiln
 

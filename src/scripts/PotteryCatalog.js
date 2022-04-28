@@ -1,21 +1,32 @@
 let potInventory = []
 
-export const toSellOrNotToSell = (potObj) => {
-    if (potObj.cracked === false) {
-    if (potObj.weight >= 6) {
-        potObj.price = 40
-    } else if (potObj.weight <= 6) {
-        potObj.price = 20
-    } potInventory.push(potObj) 
-    } return potInventory
-}
+/*export const toSellOrNotToSell = (potObj) => {
+ if (potObj.weight >= 6 && potObj.cracked === false) {
+        potObj.price = 40.00
+        potInventory.push(potObj)
+    } else if (potObj.weight <= 5 && potObj.cracked === false) {
+        potObj.price = 20.00
+    potInventory.push(potObj) }
+     return potInventory
+}*/
+
 
 export const usePottery = () => {
 return potInventory.map(potInventory => ({...potInventory}))
 }
 
 
-
+export const toSellOrNotToSell = (potObj) => {
+    if (potObj.cracked === false){
+        if (potObj.weight >= 6){
+            potObj.price = 40
+            potInventory.push(potObj)
+        } else if (potObj.weight <= 5) {
+            potObj.price = 20
+            potInventory.push(potObj)
+        }
+    } return potInventory
+}
 
 
 

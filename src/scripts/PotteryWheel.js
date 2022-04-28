@@ -1,4 +1,4 @@
-let basePottery = 1
+let basePottery = 0
 
 export const makePottery = (shape, weight, height) => {
 let potteryObj = {
